@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/micro.js"></script>
+    <script type="module">
+        import * as app from './__target__/app.js';
+        window.app = app;
+    </script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="block-news">
+        <div class="news">
+            <div class="title"></div>
+            <div class="content"></div>
+            <div class="date"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .block-news {
+        margin: 0 auto;
+        max-width: 980px;
+        display: flex;
+    }
+
+    .news {
+        width: 320px;
+        height: 225px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        border: 1px solid #e8e8e8;
+        background-color: #ffffff;
+        margin: 0 0 0 10px;
+        padding: 0 10px 20px 10px;
+        overflow: hidden;
+    }
+
+    .title {
+        height: 13px;
+        text-align: center;
+        padding: 9px 10px 15px 10px;
+        color: #58aaff;
+        font-family: "Segoe UI - Semibold";
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .content {
+        height: 190px;
+        color: #000000;
+        font-family: "Segoe UI";
+        font-size: 14px;
+        font-weight: 300;
+        overflow: hidden;
+    }
+
+    .date {
+        padding: 0 10px 0 0;
+        width: 41px;
+        height: 7px;
+        float: right;
+        color: #000000;
+        font-family: "Segoe UI";
+        font-size: 10px;
+        font-weight: 300;
+    }
+</style>
