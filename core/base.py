@@ -1,5 +1,4 @@
 # coding=utf-8
-a = require('../static/lib/jquery.js')
 class Base:
 
     """Базовый класс компонента"""

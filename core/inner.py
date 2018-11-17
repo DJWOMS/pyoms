@@ -3,16 +3,20 @@ __pragma__ ('alias', 'S', '$')
 
 class Inner:
     """Вставка в html"""
-    # def __init__(self, tag, value):
-    #     element = document.getElementById(tag)
-    #     element.innerHTML = value
-    @classmethod
-    def set(cls, tag, value):
-        """Вставка html по id элемента"""
-        element = document.getElementById(tag)
-        element.innerHTML = value
 
-    def render(self, tag, value):
+    def __init__(self, tag):
+        """Принемает атрибут тега"""
+        self.tag = tag
+
+    def html(self, value):
+        """Вставка html в элемент"""
+        S(self.tag).html(value)
+
+    def text(self, value):
+        """Вставка text в элемент"""
+        S(self.tag).text(value)
+
+    def render(self, value):
         """
         Нужно использовать словарь
 
@@ -31,13 +35,21 @@ class Inner:
           <span data-bind="name">world!</span>
         </div>
         """
-        S(tag).render(value)
+        S(self.tag).render(value)
 
-    def style(self, tag, option, vaule):
-        """Изменение style елемента"""
-        S(tag).css(option, vaule)
+    def style(self, option, vaule):
+        """Изменение style элемента"""
+        S(self.tag).css(option, vaule)
 
-    def value(self, tag):
+    def value(self):
         """Получение value"""
-        val = S(tag).value()
+        val = S(self.tag).val()
         return val
+
+    def set_value(self, value):
+        """Установить value"""
+        S(self.tag).val(value)
+
+    def page(self, url):
+        """Загрузить html"""
+        return S(self.tag).load(url)
