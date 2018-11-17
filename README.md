@@ -4,7 +4,7 @@ python on js
 
 cd example\render                                                                                
 build file                                                                                       
-python -m http.server 
+python -m http.server                                                                            
 http://localhost:8000/example/
 
 ####Binding values
@@ -25,7 +25,7 @@ attribute. Default behavior can be changed by providing a custom matcher functio
       'name':     'world!'
     };
     
-    Inner().render('#template', hello);
+    Inner('#template').render(hello);
     
     Result:
     <div id="template">

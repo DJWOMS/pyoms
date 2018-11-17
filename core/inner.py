@@ -28,7 +28,7 @@ class Inner:
           'greeting': 'Hello',
           'name':     'world!'
         };
-        Inner().render('#template', hello);
+        Inner('#template').render(hello);
 
         <div id="template">
           <span class="greeting">Hello</span>
