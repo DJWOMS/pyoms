@@ -24,9 +24,9 @@ class Inner:
           <span class="greeting"></span>
           <span data-bind="name"></span>
         </div>
-        var hello = {
-          greeting: 'Hello',
-          name:     'world!'
+        hello = {
+          'greeting': 'Hello',
+          'name':     'world!'
         };
         Inner().render('#template', hello);
 

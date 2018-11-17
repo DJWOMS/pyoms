@@ -4,7 +4,7 @@ from os.path import join, dirname
 
 setup(
     name='pyoms',
-    version='0.0.2',
+    version='0.0.3',
     description='Python to JavaScript.',
     author='Omelchenko Mihail - DJWOMS',
     author_email='socanime@gmail.com',
