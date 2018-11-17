@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../lib/jquery.js"></script>
+    <script src="../../../lib/micro.js"></script>
+    <link href="../../../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script type="module">
+        import * as app from '../__target__/app.js';
+        window.app = app;
+    </script>
+    <title>Menu</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul>
+            <li>
+                <a href="#" onclick="app.app.go('home')">Главная</a>
+            </li>
+            <li>
+                <a href="#" onclick="app.app.go('search')">Поиск</a>
+            </li>
+            <li>
+                <a href="#" onclick="app.app.go('Pay')">Покупки</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+
+    </div>
+</body>
+</html>
+<style>
+    .content {
+        font-family: 'SegoeUILight', sans-serif;
+        color: #2c3e50;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    ul {
+        margin: 16px 0 0 0 !important;
+    }
+
+    li {
+        margin: 0 0 0 22px;
+        height: 47px;
+    }
+
+    li:hover {
+        border-bottom: 3px solid #58aaff;
+    }
+
+    a {
+        width: 65px;
+        height: 13px;
+        font-size: 18px;
+        font-weight: 400;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #58aaff;
+        font-family: "SegoeUISemiBold";
+        text-decoration: none;
+    }
+
+</style>

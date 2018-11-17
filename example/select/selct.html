@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../lib/jquery.js"></script>
+    <script src="../../lib/micro.js"></script>
+    <script type="module">
+        import * as app from './__target__/add_select.js';
+        window.app = app;
+    </script>
+    <title>Title</title>
+</head>
+<body class="body">
+<div>
+    <select class="balance" onchange="app.app.change($(this).val())">
+        <option data-bind="value" value="us"></option>
+    </select>
+</div>
+</body>
+</html>
