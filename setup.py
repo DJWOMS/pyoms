@@ -4,7 +4,7 @@ from os.path import join, dirname
 
 setup(
     name='pyoms',
-    version='0.0.3',
+    version='0.0.4',
     description='Python to JavaScript.',
     author='Omelchenko Mihail - DJWOMS',
     author_email='socanime@gmail.com',
@@ -18,7 +18,7 @@ setup(
     include_package_data=True,
     long_description=open(join(dirname(__file__), 'README.md')).read(),
     install_requires=[
-        'Transcrypt==3.7.1'
+        'Transcrypt==3.7.11'
     ],
     entry_points = {
         'console_scripts': [
