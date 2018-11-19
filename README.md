@@ -1,5 +1,7 @@
 PYOMS - python frontend
 
+###pip install git+https://github.com/DJWOMS/pyoms
+
 python on js
 
 cd example\render                                                                                
