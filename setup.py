@@ -4,7 +4,8 @@ from os.path import join, dirname
 
 setup(
     name='pyoms',
-    version='0.0.5.1',
+    packages=['pyoms'],
+    version='0.0.5.2',
     description='Python to JavaScript.',
     author='Omelchenko Michail - DJWOMS',
     author_email='socanime@gmail.com',
@@ -14,7 +15,6 @@ setup(
         'Programming Language :: Python :: 3.7',
 
     ],#'Topic :: Text Processing :: Linguistic',
-    packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     long_description=open(join(dirname(__file__), 'README.md')).read(),
