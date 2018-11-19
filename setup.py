@@ -4,9 +4,9 @@ from os.path import join, dirname
 
 setup(
     name='pyoms',
-    version='0.0.5',
+    version='0.0.5.1',
     description='Python to JavaScript.',
-    author='Omelchenko Mihail - DJWOMS',
+    author='Omelchenko Michail - DJWOMS',
     author_email='socanime@gmail.com',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -16,11 +16,12 @@ setup(
     ],#'Topic :: Text Processing :: Linguistic',
     packages=find_packages(),
     include_package_data=True,
+    zip_safe=False,
     long_description=open(join(dirname(__file__), 'README.md')).read(),
     install_requires=[
         'Transcrypt==3.7.11'
     ],
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'build = transcrypt.__main__:main'
         ]
