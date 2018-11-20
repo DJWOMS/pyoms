@@ -7,7 +7,6 @@ class Ajax:
         self.header = header
         self.value = value
 
-    # @staticmethod
     def send(self, method, url, data='null'):
         """Отпрака ajax запроса"""
         xhr = __new__(XMLHttpRequest())
@@ -21,42 +20,41 @@ class Ajax:
 
     def get_json(self, url, data={}):
         """GET запрос возвращает json"""
-        url = "{}{}".format(url, self.formatParams(data))
+        url = "{}{}".format(url, self.format_params(data))
         xhr = self.send("GET", url)
-        if (xhr.status == 200 or xhr.status == 0):
+        if xhr.status == 200 or xhr.status == 0:
             return JSON.parse(xhr.responseText)
         else:
             return xhr.responseText
 
     def post_json(self, url, data={}):
         """POST запрос возвращает json"""
-        # print("data - {}".format(data))
-        body = self.formatData(data)
-        # print("body - {}".format(body))
+        body = self.format_data(data)
         xhr = self.send("POST", url, body)
-        if (xhr.status != 200):
+        if xhr.status != 200:
             return xhr.responseText
         else:
             return JSON.parse(xhr.responseText)
 
     def get_text(self, url, data={}):
         """GET запрос возвращает text"""
-        url = "{}{}".format(url, self.formatParams(data))
+        url = "{}{}".format(url, self.format_params(data))
         xhr = self.send("GET", url)
         if xhr.readyState == 4:
             if xhr.status == 200 or xhr.status == 0:
                 r = xhr.responseText
             else:
                 r = xhr.responseText
-
+        else:
+            r = False
         return r
 
     @staticmethod
-    def formatParams(params):
+    def format_params(params):
         l = '?{}'.format('&'.join(['{}={}'.format(k, v) for k, v in params.items()]))
         return l
 
     @staticmethod
-    def formatData(data):
+    def format_data(data):
         d = '{}'.format('&'.join(['{}={}'.format(k, v) for k, v in data.items()]))
         return d

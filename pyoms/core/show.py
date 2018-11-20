@@ -4,22 +4,25 @@ __pragma__ ('alias', 'S', '$')
 class Show:
     """Скрыть или показать элементы на странице"""
 
-    def show_hide(self, id):
+    def __init__(self, tag):
+        self.tag = tag
+
+    def show_hide(self):
         """Отображает или скрывает"""
-        x = document.getElementById(id)
+        x = document.getElementById(self.tag)
         if x.style.display == "none":
             x.style.display = "block"
         else:
             x.style.display = "none"
 
-    def show(self, tag):
+    def show(self):
         """Показывает"""
         # x = document.getElementById(id)
         # x.style.display = "block"
-        S(tag).show()
+        S(self.tag).show()
 
-    def hide(self, tag):
+    def hide(self):
         """Скрывает элемент"""
-        S(tag).hide()
+        S(self.tag).hide()
         # x = document.getElementById(id)
         # x.style.display = "none"
