@@ -1,6 +1,6 @@
-PYOMS - python frontend
+#PYOMS - python frontend
 
-###pip install git+https://github.com/DJWOMS/pyoms
+##pip install git+https://github.com/DJWOMS/pyoms
 
 python on js
 
@@ -9,7 +9,13 @@ build file
 python -m http.server                                                                            
 http://localhost:8000/example/
 
-####Binding values
+HTML
+`<script type="module">
+   import * as app from './static/__target__/start.js';
+   window.app = app;
+ </script>`
+ 
+##Binding values
 
 Transparency binds values in-place. That means, you don't need to write separate template sections on your page. Instead, compose just a normal, static html page and start binding some dynamic values on it!
 
