@@ -53,7 +53,3 @@ class Inner:
     def page(self, url):
         """Загрузить html"""
         return S(self.tag).load(url)
-
-    def toggle(self, effect):
-        """Toggle effect"""
-        S(self.tag).toggle(effect)

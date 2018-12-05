@@ -26,3 +26,7 @@ class Show:
         S(self.tag).hide()
         # x = document.getElementById(id)
         # x.style.display = "none"
+
+    def toggle(self, effect):
+        """Toggle effect"""
+        S(self.tag).toggle(effect)
